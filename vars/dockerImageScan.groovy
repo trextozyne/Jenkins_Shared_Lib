@@ -1,7 +1,7 @@
  def call(String project, String ImageTag, String hubUser){
 
      sh """   
-      trivy image ${hubUser}/${project}:latest > scanned.txt
+      /usr/bin/trivy image ${hubUser}/${project}:latest > scanned.txt
       cat scanned.txt
      """
  }
